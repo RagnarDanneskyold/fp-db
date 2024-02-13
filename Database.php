@@ -83,7 +83,6 @@ class Database implements DatabaseInterface
         ) {
             return ' NULL ';
         }
-        echo "<pre>";
 
         $queryPart = '';
         switch ($specifier) {
@@ -103,7 +102,7 @@ class Database implements DatabaseInterface
                 $queryPart = $this->castIdentifierArgumentToQuery($arg);
                 break;
         }
-        echo "</pre>";
+
         return $queryPart;
     }
 
